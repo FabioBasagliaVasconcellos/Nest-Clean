@@ -1,7 +1,6 @@
 import {
   Body,
   Controller,
-  HttpCode,
   Post,
   UnauthorizedException,
   UsePipes,
@@ -13,7 +12,6 @@ import { PrismaService } from "src/prisma/prisma.service";
 import { z } from "zod";
 
 const authenticateBodySchema = z.object({
-  name: z.string(),
   email: z.string().email(),
   password: z.string(),
 });
