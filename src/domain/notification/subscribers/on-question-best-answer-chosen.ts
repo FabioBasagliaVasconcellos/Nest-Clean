@@ -1,7 +1,7 @@
 import { DomainEvents } from "src/core/events/domain-events";
 import { EventHandler } from "src/core/events/event-handler";
 import { SendNotificationUseCase } from "src/domain/notification/application/use-cases/send-notification";
-import { AnswersRepository } from "src/domain/repositories/answers-repository";
+import { AnswersRepository } from "src/domain/forum/application/repositories/answers-repository";
 import { QuestionBestAnswerChosenEvent } from "src/domain/forum/enterprise/events/question-best-answer-chosen-event";
 
 export class OnQuestionBestAnswerChosen implements EventHandler {
