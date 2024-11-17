@@ -65,5 +65,5 @@
     "vite-tsconfig-paths": "^5.1.2",
     "vitest": "^2.1.5"
   },
-  "type": "module"
+  "type": "commonjs"
 }
