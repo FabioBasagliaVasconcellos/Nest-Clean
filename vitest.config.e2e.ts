@@ -6,6 +6,7 @@ export default defineConfig({
   test: {
     include: ["**/*.e2e-spec.ts"],
     globals: true,
+    environment: "node",
     root: "./",
     exclude: [...configDefaults.exclude, "**/data/pg/**"],
     setupFiles: ["./test/setup-e2e.ts"],
