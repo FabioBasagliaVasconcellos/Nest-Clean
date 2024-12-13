@@ -1,13 +1,13 @@
 import { Answer } from "../../enterprise/entities/answer";
 
-export interface AnswersRepository {
-  findById(id: string): Promise<Answer | null>;
-  findById(arg0: string): unknown;
-  findManyByQuestionId(
+export abstract class AnswersRepository {
+  abstract findById(id: string): Promise<Answer | null>;
+  abstract findById(arg0: string): unknown;
+  abstract findManyByQuestionId(
     questionId: string,
     options: { page: number }
   ): Promise<Answer[]>;
-  create(answer: Answer): Promise<void>;
-  delete(answer: Answer): Promise<void>;
-  save(answer: Answer): Promise<void>;
+  abstract create(answer: Answer): Promise<void>;
+  abstract delete(answer: Answer): Promise<void>;
+  abstract save(answer: Answer): Promise<void>;
 }
