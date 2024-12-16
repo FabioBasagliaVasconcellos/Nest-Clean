@@ -21,13 +21,13 @@ export class DeleteAnswerController {
   ) {
     const userId = user.sub;
 
-    try {const result = await this.deleteAnswer.execute({
-        answerId,
-        authorId: userId,
-      });
-  
-      if (result.isLeft()) {
-        throw new BadRequestException();
-      }}
+    const result = await this.deleteAnswer.execute({
+      answerId,
+      authorId: userId,
+    });
+
+    if (result.isLeft()) {
+      throw new BadRequestException();
+    }
   }
 }
