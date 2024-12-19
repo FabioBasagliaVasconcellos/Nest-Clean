@@ -58,12 +58,12 @@ describe("Delete question comment (E2E", () => {
 
     expect(response.statusCode).toBe(204);
 
-    const answerOnDatabase = await prisma.answer.findUnique({
+    const commentOnDataBase = await prisma.comment.findUnique({
       where: {
-        id: answerId,
+        id: questionCommentId,
       },
     });
 
-    expect(answerOnDatabase).toBeNull();
+    expect(commentOnDataBase).toBeNull();
   });
 });
